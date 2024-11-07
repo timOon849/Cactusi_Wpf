@@ -221,6 +221,7 @@
       <DependentUpon>ModelDataBase.edmx</DependentUpon>
       <LastGenOutput>ModelDataBase.cs</LastGenOutput>
     </Content>
+    <Content Include="Db\praktika1.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
