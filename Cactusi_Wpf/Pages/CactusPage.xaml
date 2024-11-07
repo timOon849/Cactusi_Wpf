@@ -1,0 +1,35 @@
+﻿<Page x:Class="Cactusi_Wpf.Pages.CactusPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Cactusi_Wpf.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1040"
+      Title="CactusPage" Background="White" Width="1040">
+    <Grid>
+
+        <ListView Name="ListCactuses" ScrollViewer.HorizontalScrollBarVisibility ="Visible" Height="393" Margin="0,57,-353,0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=ID_Cactus}" Width="40">id</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Photo}" Width="100">Фото</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Cactus_Name}" Width="150">Имя</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Price}" Width="50">Цена</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Age}" Width="50">Возраст</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Rewards}" Width="100">Награды</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Instructions}" Width="150">Инструкции</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Proishozhdenie.Name_Proishozhdenie}" Width="200">Происхождение</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Vid.Name_Vid}" Width="200">Вид</GridViewColumn>
+                </GridView>
+            </ListView.View>
+            
+        </ListView>
+        <Button x:Name="BtnAdd" Content="Добавить запись" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="110" Margin="10,10,0,0" Click="BtnAdd_Click"/>
+        <Button x:Name="BtnEdit" Content="Редактировать" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="110" Margin="132,10,0,0" Click="BtnEdit_Click"/>
+        <Button x:Name="BtnDelete" Content="Удалить запись" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="110" Margin="254,10,0,0" Click="BtnDelete_Click"/>
+        <Button x:Name="BtnExit" Content="Выход" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="110" Margin="376,10,0,0" Click="BtnExit_Click"/>
+        <Button x:Name="BtnVistavki" Content="Выставки" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="110" Margin="501,10,0,0" Click="BtnVistavki_Click"/>
+        <Button x:Name="BtnAUthExit" Content="Выход из аккаунта" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="120" Margin="628,10,0,0" Click="BtnAUthExit_Click"/>
+    </Grid>
+</Page>
